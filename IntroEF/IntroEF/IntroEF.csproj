@@ -131,6 +131,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\RegistrationController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
+    <Compile Include="DTOs\StudentDTO.cs" />
     <Compile Include="EF\Cours.cs">
       <DependentUpon>UMSModel.tt</DependentUpon>
     </Compile>
