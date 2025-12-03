@@ -1,4 +1,5 @@
-﻿using IntroEF.EF;
+﻿using IntroEF.DTOs;
+using IntroEF.EF;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +12,34 @@ namespace IntroEF.Controllers
     {
         Fall25_CEntities db = new Fall25_CEntities();
         // GET: Student
+
+        public static Student Convert(StudentDTO s) {
+            return new Student()
+            {
+                    Name = s.Name,
+                    Email = s.Email,
+                    Address = s.Address,
+                    DeptId = s.DeptId
+            };
+        }
+        public static StudentDTO Convert(Student s)
+        {
+            return new StudentDTO()
+            {
+                Name = s.Name,
+                Email = s.Email,
+                Address = s.Address,
+                DeptId = s.DeptId
+            };
+        }
+        public static List<StudentDTO> Convert(List<Student> list) {
+            var data = new List<StudentDTO>();
+            foreach (var item in list)
+            {
+                data.Add(Convert(item));
+            }
+            return data;
+        }
         public ActionResult Index()
         {
             var data = db.Students.ToList();
@@ -18,16 +47,21 @@ namespace IntroEF.Controllers
         }
         [HttpGet]
         public ActionResult Create() { 
-            return View();
+            return View(new StudentDTO());
         }
         [HttpPost]
-        public ActionResult Create(Student s) {
+        public ActionResult Create(StudentDTO s) {
             //validation
+            if (ModelState.IsValid) {
+                var st = Convert(s);
+                db.Students.Add(st);
+                db.SaveChanges(); //return no of rows affected
+                TempData["Msg"] = "Data Created";
+                return RedirectToAction("Index");
+            }
+            return View(s);
             
-            db.Students.Add(s);
-            db.SaveChanges(); //return no of rows affected
-            TempData["Msg"] = "Data Created";
-            return RedirectToAction("Index");                   
+            
         }
         public ActionResult Details(int id) {
             var data = db.Students.Find(id); //search with primary key
@@ -55,7 +89,7 @@ namespace IntroEF.Controllers
             var data = (from s in db.Students
                        where s.Name.Contains(id)
                        select s).ToList();
-            return View(data);
+            return View(Convert(data));
         }
         public ActionResult Courses() {
             var stId = 1;
