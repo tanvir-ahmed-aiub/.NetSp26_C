@@ -131,11 +131,16 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Auth\Logged.cs" />
+    <Compile Include="Controllers\DashboardController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\OrderController.cs" />
     <Compile Include="Controllers\RegistrationController.cs" />
     <Compile Include="CustomValidations\ConfPassMatch.cs" />
     <Compile Include="CustomValidations\UniqueUName.cs" />
     <Compile Include="DTOs\CustomerDTO.cs" />
+    <Compile Include="DTOs\LoginDTO.cs" />
+    <Compile Include="DTOs\ProductDTO.cs" />
     <Compile Include="EF\Customer.cs">
       <DependentUpon>PMSModel.tt</DependentUpon>
     </Compile>
@@ -222,6 +227,10 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Registration\Index.cshtml" />
+    <Content Include="Views\Registration\Login.cshtml" />
+    <Content Include="Views\Dashboard\Customer.cshtml" />
+    <Content Include="Views\Dashboard\MakeOrder.cshtml" />
+    <Content Include="Views\Order\ShowCart.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

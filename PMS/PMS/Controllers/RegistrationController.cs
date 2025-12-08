@@ -34,8 +34,32 @@ namespace PMS.Controllers
                 customer.Password = CreateMD5(customer.Password);
                 db.Customers.Add(customer);
                 db.SaveChanges();
+                TempData["Msg"] = "Registration Successfull";
+                return RedirectToAction("Login");
             }
+
             return View(c);
+        }
+        [HttpGet]
+        public ActionResult Login() {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Login(LoginDTO log) {
+            log.Pass = CreateMD5(log.Pass);
+            var user = (from c in db.Customers
+                       where c.Username.Equals(log.Uname) &&
+                       c.Password.Equals(log.Pass)
+                       select c).SingleOrDefault();
+            if (user != null)
+            {
+                Session["Logged"] = user;
+                return RedirectToAction("Customer", "Dashboard");
+            }
+            else {
+                TempData["Msg"] = "Username Password Invalid";
+                return RedirectToAction("Login");
+            }
         }
 
         public static string CreateMD5(string input)
