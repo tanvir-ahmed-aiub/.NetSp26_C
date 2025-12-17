@@ -1,0 +1,6 @@
+@IntroCFWebAPICore_HostAddress = http://localhost:5153
+
+GET {{IntroCFWebAPICore_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
