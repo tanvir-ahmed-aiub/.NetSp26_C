@@ -23,5 +23,14 @@ namespace BLL.Services
             return ret;
             
         }
+        public DepartmentDTO Get(int id) { 
+            Department data = repo.Get(id);
+            DepartmentDTO ret = MapperConfig.GetMapper().Map<DepartmentDTO>(data);
+            return ret; 
+        }
+        public bool Create(DepartmentDTO dto) { 
+            Department data = MapperConfig.GetMapper().Map<Department>(dto);
+            return repo.Create(data);
+        }
     }
 }

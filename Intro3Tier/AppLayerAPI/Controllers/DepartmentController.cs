@@ -1,4 +1,5 @@
-﻿using BLL.Services;
+﻿using BLL.DTOs;
+using BLL.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -16,6 +17,17 @@ namespace AppLayerAPI.Controllers
         public IActionResult All() {
             var data = service.All();
             return Ok(data);
+        }
+        [HttpGet("{id}")]
+        public IActionResult Get(int id) { 
+            var data = service.Get(id); 
+            return Ok(data);
+        }
+        [HttpPost("create")]
+        public IActionResult Create(DepartmentDTO d) { 
+        
+            var rs = service.Create(d);
+            return Ok(rs);
         }
     }
 }

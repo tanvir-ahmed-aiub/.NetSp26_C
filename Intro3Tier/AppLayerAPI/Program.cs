@@ -1,5 +1,7 @@
 using BLL.Services;
+using DAL.EF;
 using DAL.Repos;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +13,9 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<DepartmentService>();
 builder.Services.AddScoped<DepartmentRepo>();
+builder.Services.AddDbContext<UMSContext>(opt => {
+    opt.UseSqlServer(builder.Configuration.GetConnectionString("DbConn"));
+});
 
 var app = builder.Build();
 
