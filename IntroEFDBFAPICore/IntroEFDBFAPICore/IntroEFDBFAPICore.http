@@ -1,6 +1,0 @@
-@IntroEFDBFAPICore_HostAddress = http://localhost:5210
-
-GET {{IntroEFDBFAPICore_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
