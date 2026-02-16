@@ -1,0 +1,53 @@
+﻿
+@{
+    ViewData["Title"] = "Projects";
+}
+@{
+    //razor block
+    string name = "Rahim";
+    string id = "123";
+    float cgpa = 3.45f;
+    string[] names = new string[] { "Rahim", "Karim", "Rahman", "Rahim", "Karim", "Rahman" };
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>Name</th>
+    </tr>
+    @for (int i = 0;i <names.Length; i++){
+        <tr>
+            <td>
+                @names[i]
+            </td>
+        </tr>
+        
+    }
+</table>
+
+<h1>Projects</h1>
+<table class="table  table-bordered">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Id</th>
+            <th>Cgpa</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>@name</td>
+            <td>@id</td>
+            <td>@cgpa</td>
+        </tr>
+        <tr>
+            <td>ABC</td>
+            <td>123</td>
+            <td>3.4</td>
+        </tr>
+        <tr>
+            <td>ABC</td>
+            <td>123</td>
+            <td>3.4</td>
+        </tr>
+    </tbody>
+</table>
