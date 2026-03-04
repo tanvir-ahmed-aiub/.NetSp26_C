@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\Tanvir Ahmed\\Desktop\\.NET\\C\\FormProcessing\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{E15E62B2-3CA7-BC01-C665-FCAFDC264FF1}|FormProcessing\\FormProcessing.csproj|c:\\users\\tanvir ahmed\\desktop\\.net\\c\\formprocessing\\formprocessing\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E15E62B2-3CA7-BC01-C665-FCAFDC264FF1}|FormProcessing\\FormProcessing.csproj|solutionrelative:formprocessing\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E15E62B2-3CA7-BC01-C665-FCAFDC264FF1}|FormProcessing\\FormProcessing.csproj|c:\\users\\tanvir ahmed\\desktop\\.net\\c\\formprocessing\\formprocessing\\views\\home\\registration.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{E15E62B2-3CA7-BC01-C665-FCAFDC264FF1}|FormProcessing\\FormProcessing.csproj|solutionrelative:formprocessing\\views\\home\\registration.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -39,19 +43,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Tanvir Ahmed\\Desktop\\.NET\\C\\FormProcessing\\FormProcessing\\appsettings.json",
+              "RelativeDocumentMoniker": "FormProcessing\\appsettings.json",
+              "ToolTip": "C:\\Users\\Tanvir Ahmed\\Desktop\\.NET\\C\\FormProcessing\\FormProcessing\\appsettings.json",
+              "RelativeToolTip": "FormProcessing\\appsettings.json",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAkAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-03-02T05:38:39.448Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Registration.cshtml",
               "DocumentMoniker": "C:\\Users\\Tanvir Ahmed\\Desktop\\.NET\\C\\FormProcessing\\FormProcessing\\Views\\Home\\Registration.cshtml",
               "RelativeDocumentMoniker": "FormProcessing\\Views\\Home\\Registration.cshtml",
               "ToolTip": "C:\\Users\\Tanvir Ahmed\\Desktop\\.NET\\C\\FormProcessing\\FormProcessing\\Views\\Home\\Registration.cshtml",
               "RelativeToolTip": "FormProcessing\\Views\\Home\\Registration.cshtml",
-              "ViewState": "AgIAACkAAAAAAAAAAAAiwC4AAAA9AAAAAAAAAA==",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAAC4AAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-02-25T05:31:32.201Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "RegistrationModel.cs",
               "DocumentMoniker": "C:\\Users\\Tanvir Ahmed\\Desktop\\.NET\\C\\FormProcessing\\FormProcessing\\Models\\RegistrationModel.cs",
               "RelativeDocumentMoniker": "FormProcessing\\Models\\RegistrationModel.cs",
@@ -59,12 +76,11 @@
               "RelativeToolTip": "FormProcessing\\Models\\RegistrationModel.cs",
               "ViewState": "AgIAAAcAAAAAAAAAAAAAwA4AAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-25T05:29:26.48Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-25T05:29:26.48Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "LoginModel.cs",
               "DocumentMoniker": "C:\\Users\\Tanvir Ahmed\\Desktop\\.NET\\C\\FormProcessing\\FormProcessing\\Models\\LoginModel.cs",
               "RelativeDocumentMoniker": "FormProcessing\\Models\\LoginModel.cs",
@@ -76,7 +92,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Tanvir Ahmed\\Desktop\\.NET\\C\\FormProcessing\\FormProcessing\\Program.cs",
               "RelativeDocumentMoniker": "FormProcessing\\Program.cs",
@@ -88,7 +104,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Login.cshtml",
               "DocumentMoniker": "C:\\Users\\Tanvir Ahmed\\Desktop\\.NET\\C\\FormProcessing\\FormProcessing\\Views\\Home\\Login.cshtml",
               "RelativeDocumentMoniker": "FormProcessing\\Views\\Home\\Login.cshtml",
@@ -100,7 +116,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\Tanvir Ahmed\\Desktop\\.NET\\C\\FormProcessing\\FormProcessing\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "FormProcessing\\Controllers\\HomeController.cs",
@@ -108,8 +124,7 @@
               "RelativeToolTip": "FormProcessing\\Controllers\\HomeController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-18T05:57:44.306Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-18T05:57:44.306Z"
             }
           ]
         }
