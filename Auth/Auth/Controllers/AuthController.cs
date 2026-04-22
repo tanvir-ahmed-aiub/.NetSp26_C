@@ -15,6 +15,35 @@ namespace Auth.Controllers
             this.db = db;
         }
 
+        public IActionResult Dashboard() {
+            if (HttpContext.Session.GetString("Uname") != null) {
+                ViewBag.Uname = HttpContext.Session.GetString("Uname");
+                ViewBag.Type = HttpContext.Session.GetInt32("UType");
+                return View();
+            }
+            return Unauthorized();
+            
+        }
+
+        [HttpGet]
+        public IActionResult Login() { 
+            return View();
+        }
+        [HttpPost]
+        public IActionResult Login(string Uname, string Password) {
+            var user = (from u in db.Users   
+                       where u.Username.Equals(Uname) &&
+                       u.Password.Equals(GetMd5(Password))
+                       select u).SingleOrDefault();
+            if (user != null) {
+                HttpContext.Session.SetString("Uname", user.Username);
+                HttpContext.Session.SetInt32("UType",user.Type );
+                return RedirectToAction("Dashboard");
+            }
+            TempData["Msg"] = "Username and Passsword Invalid";
+            return View();
+        }
+
         [HttpGet]
         public IActionResult Registration()
         {
