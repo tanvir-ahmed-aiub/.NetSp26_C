@@ -5,10 +5,14 @@ namespace MVCApp.Controllers
 {
     public class DepartmentController : Controller
     {
+        DepartmentService service;
+        public DepartmentController(DepartmentService service) { 
+            this.service = service;
+        }
 
         [HttpGet]
         public IActionResult List() {
-            var service = new DepartmentService();
+            
             var data = service.GetAll();
             
             return View(data);
@@ -16,7 +20,7 @@ namespace MVCApp.Controllers
         [HttpPost]
         public IActionResult Create(){ //param 
             //validation
-            var service = new DepartmentService();
+            
             var res = service.Create();
             return View(res);
         }
